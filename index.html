@@ -5,6 +5,9 @@
 </head>
 <body>
     <h1>Dashboard Bot Discord</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
     <form method="POST">
         <label for="token">Bot Token:</label>
         <input type="text" id="token" name="token" required>
