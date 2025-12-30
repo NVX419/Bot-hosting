@@ -16,4 +16,8 @@ def start_bot():
         await ctx.send('Pong!')
 
     token = os.getenv('DISCORD_TOKEN')
+    if token is None:
+        print("Error: DISCORD_TOKEN not set")
+        return
+
     bot.run(token)
